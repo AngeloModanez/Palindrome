@@ -14,14 +14,16 @@ export class PalinComponent {
     const reversed = text.split('').reverse().join('');
 
     if (text === '') {
-      this.img = '';
       this.result = '';
+      this.img = '';
       return;
-    } else if (text === reversed) {
-      this.result = 'Its a Palindrome';
+    } if (text === reversed) {
+      this.img = '../assets/happy.png';
+      this.result = text + ' is a Palindrome';
       return;
     } else if (text !== reversed) {
-      this.result = 'Its not a Palindorme';
+      this.img = '../assets/sad.png';
+      this.result = text + ' is not a Palindorme';
       return;
     }
   }

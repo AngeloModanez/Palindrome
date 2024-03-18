@@ -1,0 +1,16 @@
+<div class="container rounded-5 mx-auto bg-dark p-3 m-4 text-center">
+  <h2 class="text-light mt-3">Type Something:</h2>
+  <input
+    class="border border-dark-subtle border-5 rounded-pill m-4 fs-2"
+    type="text"
+    [(ngModel)]="text"
+    (ngModelChange)="rev($event)"
+  />
+
+  <h2 class="text-light m-3">{{ result }}</h2>
+
+  <img
+    [src]="img"
+    class="rounded mx-auto d-block"
+  />
+</div>
